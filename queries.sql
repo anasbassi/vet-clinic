@@ -15,7 +15,7 @@ ROLLBACK;
 BEGIN;
 UPDATE animals SET species = 'unspecified';
 UPDATE animals SET Species = 'digimon' WHERE Name like '%mon';
-UPDATE animals SET Species = 'pokemon' WHERE Species = 'unspecified';
+UPDATE animals SET Species = 'pokemon' WHERE Species = null;
 COMMIT;
 BEGIN;
 DELETE FROM animals;
